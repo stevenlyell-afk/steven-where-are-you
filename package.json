@@ -1,0 +1,8 @@
+{
+  "name": "steven-where-are-you",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "@netlify/blobs": "^9.1.2"
+  }
+}
