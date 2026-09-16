@@ -1,0 +1,11 @@
+{
+  "name": "steven-where-are-you",
+  "version": "4.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^9.1.2"
+  }
+}
