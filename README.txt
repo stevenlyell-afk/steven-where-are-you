@@ -1,25 +1,44 @@
-STEVEN, WHERE ARE YOU? — V0.2
+STEVEN, WHERE ARE YOU? — VERSION 4.0
 
-DEPLOY:
-1. Upload this entire unzipped folder to Netlify.
-2. In Netlify go to Project configuration > Environment variables.
-3. Add ADMIN_PIN and choose a PIN only you know.
-4. Redeploy once after adding the PIN.
-5. Public page: https://YOUR-SITE.netlify.app/
-6. Your dashboard: https://YOUR-SITE.netlify.app/admin.html
+WHAT IS FIXED
+- Complete Netlify Functions backend is included.
+- Admin updates save and appear on the public page.
+- Weather votes, reactions, comments, and ride requests save in Netlify Blobs.
+- Ride requests include the rider's telephone number and notes.
+- Recent ride requests load in Steven's admin dashboard.
+- Optional Twilio text-message alert when a new ride request arrives.
+- Corrected and validated netlify.toml file.
 
-V0.2:
-- Phone-friendly admin dashboard
-- Shared status/update/article/ride availability
-- Saved weather votes and article reactions
-- Saved comments
-- Saved ride requests
-- Recent ride requests visible in admin
-- Updated X minutes ago
+FILES TO UPLOAD
+Upload the COMPLETE contents of this folder to the same repository connected to Netlify.
+Keep the netlify/functions folder and every file inside it exactly where they are.
+Do not rename index.html, admin.html, package.json, or netlify.toml.
 
-Still coming:
-- Real automatic weather
-- Real map mileage
-- Live GPS/location
-- Proper user accounts/authentication
-- Real car and Steven photos
+REQUIRED NETLIFY SETTING
+In Netlify, open Project configuration > Environment variables.
+Create this variable:
+
+ADMIN_PIN = a PIN only Steven knows
+
+After saving the variable, trigger a new deploy.
+
+OPTIONAL TEXT-MESSAGE ALERTS
+The ride request saves and appears in the dashboard without text-message setup.
+For automatic text alerts, add these Netlify environment variables from a Twilio account:
+
+TWILIO_ACCOUNT_SID
+TWILIO_AUTH_TOKEN
+TWILIO_FROM_NUMBER
+SMS_TO_NUMBER
+
+If using a Twilio Messaging Service, use TWILIO_MESSAGING_SERVICE_SID instead of TWILIO_FROM_NUMBER.
+All telephone numbers must include country code, for example: +17025551234
+Redeploy after adding or changing environment variables.
+
+ADDRESSES
+Public page: https://steven-where-are-you.netlify.app/
+Steven's dashboard: https://steven-where-are-you.netlify.app/admin.html
+
+IMPORTANT
+Do not place the PIN or Twilio credentials inside any HTML, JavaScript, TOML, or JSON file.
+Keep those values only in Netlify Environment variables.
