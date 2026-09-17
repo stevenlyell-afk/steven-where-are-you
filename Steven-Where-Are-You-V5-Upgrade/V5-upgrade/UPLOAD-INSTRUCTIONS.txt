@@ -1,0 +1,32 @@
+STEVEN, WHERE ARE YOU? — VERSION 5.0 UPDATE
+
+Upload these three files to the MAIN (top-level) area of the GitHub repository:
+
+1. index.html
+2. admin.html
+3. ride-status.html
+
+Upload this function file into the existing folder shown below:
+
+4. Steven-Where-Are-You-V4/netlify/functions/ride-request.mjs
+
+Important:
+- Replace the old index.html, admin.html, and ride-request.mjs when GitHub asks.
+- ride-status.html is new, so add it at the top level beside index.html.
+- Do not rename any file.
+- Do not change netlify.toml or the ADMIN_PIN.
+- car-photo.jpg stays where it already is at the top level.
+
+After GitHub finishes uploading, Netlify should deploy automatically.
+
+HOW TO USE THE RIDE WORKFLOW
+
+1. Open /admin.html and enter the PIN.
+2. Tap Load / Refresh Rides.
+3. Move a ride through:
+   New > Acknowledged > En route > Arrived > Passenger picked up > Completed
+4. Completed and canceled rides move into Ride History.
+5. When Start Driving is tapped, allow location access and keep the admin page open.
+6. The rider uses the private tracking link created after their request.
+
+Note: iPhone browsers may pause location updates when the browser is closed or the phone is locked for a while. The dashboard must remain open for dependable live updates.
